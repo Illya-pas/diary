@@ -58,3 +58,27 @@ $('icon-arrow-left2').on('click', function () {
 $('.icon-interface1').on('click', function () {
 	document.querySelector('.header__input').value = '';
 })
+$('.side_icon').on('click', function () {
+	$('.side_icon').css({'background-color':'initial'});
+	$(this).css({'background-color':'orange'});
+})
+$('.icon-social-media').on('click', function () {
+	document.querySelector('.header__left__inf').innerHTML = 'Reminder';
+})
+$('.icon-seo-and-web').on('click', function () {
+	document.querySelector('.header__left__inf').innerHTML = 'Notes';
+})
+$('.icon-rubbish-can').on('click', function () {
+	document.querySelector('.header__left__inf').innerHTML = 'Trash can';
+})
+$('.header__burger').on('click', function () {
+	$('.item__describe').toggleClass('describe_active');
+	$('.item__describe').css({'display':'none'})
+	$('.describe_active').css({'display':'flex'});
+})
+$('.menu__item').on('click', function () {
+	$('.menu__item').removeClass('active_item');
+	$(this).addClass('active_item');
+	$('.side_icon').css({'background-color':'initial'});
+	$('.active_item > .side_icon').css({'background-color':'orange'});
+})
