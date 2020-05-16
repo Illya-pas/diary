@@ -64,6 +64,18 @@
 
 		</div>
 	</div>
+<form action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">OK</button>
+</form>
+<div><br><h1> Notatka </h1>
+    {% for post in posts %}
+        {{ post.title }}<br>
+        {{ post.body }}<br>
+    {% endfor %}
+
+</div>-->
 </body>
 <!--<form action="" method="post">
     {% csrf_token %}
