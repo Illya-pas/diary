@@ -40,7 +40,7 @@
             <span class="icon-cog" data-title="Configuration"></span>
         </div>
 
-        <div class="header__right__user user" data-title="Profile">
+        <div class="header__right__user user" data-title="{{ request.user }}">
             <div class="user__icon"></div>
         </div>
     </div>
@@ -78,6 +78,7 @@
 </div>-->
 </body>
 <!--<form action="" method="post">
+
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit">OK</button>
