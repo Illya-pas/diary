@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0cf0956b-5ea7-4e13-ae5d-8c1a50596abd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/gitClone.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gitClone.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Diary/register/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Diary/register/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Diary/register/static/css/signup.css" beforeDir="false" afterPath="$PROJECT_DIR$/Diary/register/static/css/signup.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Diary/register/static/img/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/Diary/register/static/img/logos.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Diary/register/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/Diary/register/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Diary/register/static/js/mains.js" beforeDir="false" afterPath="$PROJECT_DIR$/Diary/register/static/js/mains.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Diary/register/templates/register/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/Diary/register/templates/register/signup.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Diary/splanerapp/templates/splanerapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Diary/splanerapp/templates/splanerapp/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Diary/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Diary/static/js/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
