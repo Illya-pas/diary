@@ -197,7 +197,9 @@ h1, h2, h3, h4, h5, h6 {
 .signup_form {
   display: none;
 }
-
+.form input:last-child{
+    border-radius: 25px;
+}
 .start_now {
   text-align: center;
   padding: 14px 28px;
@@ -216,19 +218,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: box-shadow 0.3s;
 }
 
-.start_now {
-  text-align: center;
-  padding: 14px 28px;
-  width: 400px;
-  background-color: #33BFF5;
-  border-radius: 25px;
-  font-size: 18px;
-  font-weight: 600;
-  color: #fff;
-  cursor: pointer;
-  transition: box-shadow 0.5s;
-  margin: 15px 0 60px;
-}
+
 .start_now:hover {
   box-shadow: 0 0 10px #33BFF5;
   transition: box-shadow 0.3s;
@@ -287,4 +277,17 @@ h1, h2, h3, h4, h5, h6 {
   .form {
     margin-top: -40px;
   }
+}
+.start_now {
+  text-align: center;
+  padding: 14px 28px;
+  width: 400px;
+  background-color: #33BFF5;
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  transition: box-shadow 0.5s;
+  margin: 15px 0 60px;
 }
