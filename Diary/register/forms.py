@@ -1,12 +1,22 @@
+<<<<<<< HEAD
 from django import forms
 from django.contrib.auth import (
     authenticate,
     get_user_model
+=======
+from typing import Any
+
+from allauth.account import forms
+from allauth.account.forms import LoginForm, PasswordField, BaseSignupForm
+from allauth.account.templatetags import account
+from django.forms import TextInput, PasswordInput, BooleanField, CharField
+>>>>>>> 52bf164295361b6a2baa4d23a2d4f59767ae10bf
 
 )
 
 User = get_user_model()
 
+<<<<<<< HEAD
 
 class UserLoginForm(forms.Form):
     username = forms.CharField(label='', widget=forms.TextInput(attrs={'class': 'in_email', 'placeholder': 'username'}))
@@ -76,3 +86,18 @@ class UserRegisterForm(forms.ModelForm):
 #         self.fields['login'].widget = TextInput(
 #             attrs={'class': 'signin_form form', 'placeholder': 'Name', 'label': 'None'})
 #         self.fields['password'].widget = PasswordInput(attrs={'class': 'signin_form form', 'placeholder': 'Password'})
+=======
+    remember = None
+    # remember = BooleanField(label=(""),
+    #                         required=False)
+    password = PasswordField(label=(""))
+
+    def __init__(self, *args, **kwargs):
+        super(YourLoginForm, self).__init__(*args, **kwargs)
+        self.fields['login'].widget = TextInput(
+            attrs={'class': 'signin_form form', 'placeholder': 'Name'})
+        self.fields['password'].widget = PasswordInput(attrs={'class': 'signin_form form', 'placeholder': 'Password'})
+
+custom_form: Any = super(BaseSignupForm, self):
+    username.label = ''
+>>>>>>> 52bf164295361b6a2baa4d23a2d4f59767ae10bf
