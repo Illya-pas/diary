@@ -15,13 +15,8 @@
 			<img src="{% static 'img/logos.png' %}" alt="logo">
 			<h1 class="logo_describe">sPlaner</h1>
 		</div>
-<<<<<<< HEAD
-		<span class="signin">Sign in</span>
-		<span class="signup">Sign up</span>
-=======
-		<span class=""><a href="{{ signup_url }}">sign up</a></span>
-		<span class=""><a href="{{ login_url }}">sign in</a> </span>
->>>>>>> 52bf164295361b6a2baa4d23a2d4f59767ae10bf
+		<button>
+		<span class="sigup"><a href="{{ '/accounts/login/' }}">sign in</a></span></button>
 	</div>
 
 	<div class="content">
@@ -31,30 +26,13 @@
 		</div>
 		<div class="signup_form form">
 			<h2>Signup Now</h2>
-<<<<<<< HEAD
-=======
-			  {% csrf_token %}
-			  {{ form.as_p }}
-			  {% if redirect_field_value %}
-			  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-			  {% endif %}
-			  <button class="start_now" type="submit">Start Now</button>
-		</form>
-		<form class="login signin_form form" method="POST" action="{% url 'account_login' %}">
-			<h2>Sign in Now</h2>
-			{% csrf_token %}
-  			{{ form.as_p }}
-			{% if redirect_field_value %}
-			<input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-  			{% endif %}
-  			<button class="primaryAction start_now" type="submit">Start Now</button>
->>>>>>> 52bf164295361b6a2baa4d23a2d4f59767ae10bf
+
 
 <form class="signup_form form" method="POST">
-        {% csrf_token %}
-        {{ form }}
-		<input class="start_now" type="submit" value="Start Now" />
-<!--        <input class="start_now" type="submit" />-->
+        	{% csrf_token %}
+        	{{ form }}
+			<input class="start_now" type="submit" value="Start Now" />
+
 </form>
 <!--		<div class="signup_form form">-->
 <!--			<h2>Signup Now</h2>-->

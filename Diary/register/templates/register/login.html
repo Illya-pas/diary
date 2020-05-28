@@ -15,8 +15,9 @@
 			<img src="{% static 'img/logo.png' %}" alt="logo">
 			<h1 class="logo_describe">sPlaner</h1>
 		</div>
-		<span class="signin">Sign in</span>
-		<span class="signup">Sign up</span>
+		<button>
+		<span class="sigup"><a href="{{ '/accounts/register/' }}">Sign up</a></span></button>
+
 	</div>
 
 	<div class="content">
@@ -46,12 +47,7 @@
 <!--			<span class="start_now">Start Now</span>-->
 		</div>
 	</div>
- <h1>Login</h1>
-    <form method="POST">
-        {% csrf_token %}
-        {{ form }}
-        <input  class="start_now" type="submit" />
-    </form>
+
 
 
 </body>
