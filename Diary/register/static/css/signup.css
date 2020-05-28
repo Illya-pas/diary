@@ -97,40 +97,6 @@ h1, h2, h3, h4, h5, h6 {
   margin-left: 10px;
   font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 }
-
-.signin {
-  margin-right: 20px;
-  padding: 14px 28px;
-  background-color: #33BFF5;
-  border-radius: 25px;
-  font-size: 18px;
-  font-weight: 600;
-  color: #fff;
-  cursor: pointer;
-  transition: box-shadow 0.5s;
-}
-.signin:hover {
-  box-shadow: 0 0 10px #33BFF5;
-  transition: box-shadow 0.3s;
-}
-
-.signup {
-  margin-right: 20px;
-  padding: 14px 28px;
-  background-color: #33BFF5;
-  border-radius: 25px;
-  font-size: 18px;
-  font-weight: 600;
-  color: #fff;
-  cursor: pointer;
-  transition: box-shadow 0.5s;
-  display: none;
-}
-.signup:hover {
-  box-shadow: 0 0 10px #33BFF5;
-  transition: box-shadow 0.3s;
-}
-
 .content {
   height: 100%;
   width: 100%;
@@ -224,6 +190,24 @@ h1, h2, h3, h4, h5, h6 {
   transition: box-shadow 0.3s;
 }
 
+/*&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&*/
+.sigup {
+  margin-right: 20px;
+  padding: 14px 28px;
+  background-color: #33BFF5;
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  transition: box-shadow 0.5s;
+}
+.sigup:hover {
+  box-shadow: 0 0 10px #33BFF5;
+  transition: box-shadow 0.3s;
+}
+/*&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&*/
+
 @media screen and (max-width: 1200px) {
   .content {
     flex-direction: column;
@@ -243,10 +227,13 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .form input {
-    margin: 8px 10px 8px;
+    margin: 8px 50px 20px;
     max-width: 280px;
     max-height: 45px;
     font-size: 15px;
+  }
+  .form input:last-cild{
+    margin-bottom: 40px;
   }
   .form h2 {
     padding-top: 50px;

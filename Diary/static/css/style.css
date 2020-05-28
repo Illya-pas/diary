@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap');
 /* ZEROING */
 
 * {
@@ -222,7 +223,7 @@ h1, h2, h3, h4, h5, h6 {
   max-height: 25px;
   position: absolute;
   content: attr(data-title);
-  margin-top: 40px;
+  margin-top: -20px;
   font-size: 14px;
   padding: 5px;
   background-color: black;
@@ -249,6 +250,27 @@ h1, h2, h3, h4, h5, h6 {
   border: 1px solid grey;
   cursor: pointer;
 }
+
+/******************************************/
+.user button{
+	position: absolute;
+	margin-top: 35px;
+	font-size: 15px;
+	padding: 1px 2px;
+	border-radius: 4px;
+	background-color: black;
+	color: #fff;
+	border: 1px solid orange;
+	transition: .3s;
+	font-family: 'Chelsea Market', cursive;
+	display: none;
+}
+.user button:hover{
+	background-color: orange;
+	color: black;
+	transition: .3s;
+}
+/******************************************/
 
 @media screen and (max-width: 1220px) {
   .header__left input {

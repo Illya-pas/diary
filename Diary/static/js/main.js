@@ -84,24 +84,9 @@ $('.menu__item').on('click', function () {
 	$('.side_icon').css({'background-color':'initial'});
 	$('.active_item > .side_icon').css({'background-color':'orange'});
 })
-// SIGN UP/IN/////////////
-// $('.signin').on('click', function () {
-// 	$('.signup_form').css({'display':'none'});
-// 	$('.signin_form').css({'display':'flex'});
-// 	$('.signin').css({'display':'none'});
-// 	$('.signup').css({'display':'flex'});
-// })
-// $('.signup').on('click', function () {
-// 	$('.signin_form').css({'display':'none'});
-// 	$('.signup_form').css({'display':'flex'});
-// 	$('.signup').css({'display':'none'});
-// 	$('.signin').css({'display':'flex'});
-// })
-// $('.get_started').on('click', function () {
-// 	$('.signin_form').css({'display':'none'});
-// 	$('.signup_form').css({'display':'flex'});
-// 	$('.signup').css({'display':'none'});
-// 	$('.signin').css({'display':'flex'});
-//  console.log(1);
-// })
+$('.user__icon').on('click', function () {
+	$('.exit_button').toggleClass('butt_active');
+	$('.exit_button').css({'display':'none'});
+	$('.butt_active').css({'display':'block'});
+});
 });
