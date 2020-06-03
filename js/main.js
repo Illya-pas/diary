@@ -1,3 +1,5 @@
+
+jQuery(function(){
 $('.icon-download').on('click', function () {
 	$('.icon-download').css({'display':'none'});
 	$('.icon-interface').css({'display':'flex'});
@@ -144,3 +146,4 @@ $('.notes_close').on('click', e => {
 	document.querySelector('.header_note').value = '';
 	document.querySelector('.describe_notes').value = '';
 })
+});
