@@ -9,7 +9,6 @@ class PostForm(ModelForm):
         fields = ['title', 'body']
 
         widgets = {
-            'title': forms.TextInput(attrs={'class': 'form-control'}),
-            'body': forms.Textarea(attrs={'class': 'form-control'})
+            'title': forms.TextInput(attrs={'class': 'header_note note_in', "placeholder": "Print header"}),
+            'body': forms.Textarea(attrs={'class': 'describe_notes note_in', "placeholder": "Notes..."})
         }
-

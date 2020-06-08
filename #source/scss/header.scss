@@ -27,6 +27,7 @@
 		visibility: hidden;
 		opacity: 0;
 		z-index: 5;
+		width: max-content;
 	}
 	&:hover:after{
 		visibility: visible;
@@ -45,6 +46,9 @@
 	align-items: center;
 	justify-content: space-between;
 	border-bottom: 1px solid #DADBE0 ;
+	position: fixed;
+	z-index: 30;
+	background-color: #fff;
 }
 .header__left {
 	width: 50%;
@@ -152,7 +156,7 @@
 		max-height: 25px;
 		position: absolute;
 		content: attr(data-title);
-		margin-top: 40px;
+		margin-top: -20px;
 		font-size: 14px;
 		padding: 5px;
 		background-color: black;
@@ -168,6 +172,27 @@
 		transition: opacity .3s .5s;
 	}
 }
+// *************************
+.user button{
+	position: absolute;
+	margin-top: 35px;
+	font-size: 15px;
+	padding: 1px 2px;
+	border-radius: 4px;
+	background-color: black;
+	color: #fff;
+	border: 1px solid orange;
+	transition: .3s;
+	font-family: 'Chelsea Market', cursive;
+	display: none;
+
+	&:hover{
+		background-color: orange;
+		color: black;
+		transition: .3s;
+	}
+}
+// *************************
 .user__icon {
 	display: flex;
 	background-image: url('../img/dolphin.png');
