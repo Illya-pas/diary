@@ -1,7 +1,7 @@
 from time import gmtime, strftime
 
 from django.contrib.auth.models import AbstractUser
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Post
 from .forms import PostForm
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -9,15 +9,27 @@ from django.contrib.auth import authenticate
 
 
 def index(request):
-    post = Post.objects.all
+    if not request.user.is_authenticated:
+        return redirect('/accounts/login/')
+        # print(request.user.is_authenticated)
+    res = None
+    post = Post.objects.filter(Users=request.user.id)
     if request.method == 'POST':
+
+        # form_data = {"Users_id": request.user.id, **request.POST}
         form = PostForm(request.POST)
         if form.is_valid:
-            form.save()
+            form = form.save()
+            Post.objects.filter(id=form.id).update(Users_id=request.user.id, color=request.POST['color'])
+            return redirect('/')
+
     else:
+        if res is not None:
+            print(res)
+            form = PostForm(Post.objects.get(id=res))
+        else:
 
-        form = PostForm()
-
+            form = PostForm()
     return render(request, 'splanerapp/index.html', {
         'posts': post,
         'form': form

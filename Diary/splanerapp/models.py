@@ -12,10 +12,11 @@ from django.urls import reverse
 
 
 class Post(models.Model):
-    Users = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='people', blank=True, null=True)
-    title = models.CharField('', max_length=15)
+    Users = models.ForeignKey(user, on_delete=models.CASCADE, verbose_name='people', blank=True, null=True)
+    title = models.CharField('', max_length=150)
     body = models.TextField("")
     created = models.DateTimeField("", auto_now_add=True)
+    color = models.CharField(max_length=24, default='rgb (255, 255, 255)')
 
     # user = models.OneToOneField(User, verbose_name="Пользователь", on_delete=models.CASCADE, blank=True, null=True
     #                             )

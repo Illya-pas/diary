@@ -79,6 +79,7 @@ $('.header__burger').on('click', function () {
 	$('.describe_active').css({'display':'flex'});
 })
 $('.menu__item').on('click', function () {
+
 	$('.menu__item').removeClass('active_item');
 	$(this).addClass('active_item');
 	$('.side_icon').css({'background-color':'initial'});
@@ -136,6 +137,8 @@ $('.color').on('click', function (e) {
 	let that = document.querySelector('.active_color');
 	let col = getComputedStyle(that);
 	let cola = col.backgroundColor;
+//	ішлюха сюда не лізь
+	$('[name="color"]').val(cola)
 	$('.color').empty();
 	$(this).append('<span class="icon-checkmark"></span>');
 	$('.add_note').css({'background-color':cola});

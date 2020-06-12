@@ -130,5 +130,6 @@ EMAIL_BACKEND = 'django.core.mail.backends.dummy.EmailBackend'
 STATIC_DIR = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = [STATIC_DIR, ]
 STATIC_URL = '/static/'
-
+# STATIC_ROOT = "/var/www/example.com/static/"
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 SITE_ID = 1
