@@ -3,10 +3,14 @@ jQuery(function(){
 $('.icon-download').on('click', function () {
 	$('.icon-download').css({'display':'none'});
 	$('.icon-interface').css({'display':'flex'});
+	$('.notes_bloc').css({'flex-direction':'column', 'align-items':'center'});
+	$('.note').css({'width':'570px', 'margin-left':'17px'});
 })
 $('.icon-interface').on('click', function () {
 	$('.icon-interface').css({'display':'none'});
 	$('.icon-download').css({'display':'flex'});
+	$('.notes_bloc').css({'flex-direction':'row', 'align-items':'start'});
+	$('.note').css({'width':'240px', 'margin-left':'0'});
 })
 $('.header__input').on('focusin', function () {
 	$('.header__input').css({'background-color':'#fff', 'box-shadow':'0px 1px 3px grey', 'transition':'.3s'});
@@ -149,4 +153,8 @@ $('.notes_close').on('click', e => {
 	document.querySelector('.header_note').value = '';
 	document.querySelector('.describe_notes').value = '';
 })
+function maxLengthCheck (object) {
+    if (object.value.length > object.maxLength)
+      object.value = object.value.slice(0, object.maxLength)
+}
 });
