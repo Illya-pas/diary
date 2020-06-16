@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width">
 	<title>Diary</title>
 	<link rel="stylesheet" href="{% static 'icomoon/styles.css' %}">
-	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+	<link rel="stylesheet" href="{% static 'css/stylee.css' %}">
 	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 	<script src="{% static 'js/main.js' %}"></script>
 <!--	<script src="http://static.example.com/js/main.js"></script>-->
@@ -35,7 +35,7 @@
 
 	<div class="header__right">
 		<div class="header__right__menu">
-			<span class="icon-spinner11" data-title="Refresh"></span>
+			<a href="{{ '/' }}"><span class="icon-spinner11" data-title="Refresh"></span></a>
 			<span class="icon-download" data-title="List"></span>
 			<span class="icon-interface" data-title="Grid"></span>
 			<span class="icon-cog" data-title="Configuration"></span>
@@ -107,155 +107,37 @@
 					</div>
 				</div>
 				{% endfor %}
-<!--				<div class="note">-->
-<!--					<h3 class="header_n">line-height: 1.3;</h3>-->
-<!--					<p class="describe_n">line-height: 1.3;;['p;olikujyhgfdfrgtyholikujyhgfdfrgtyhujio9p0ujio9p0[;polikujnhbgvfds</p>-->
-<!--					<div class="date">-->
-<!--						<span class="icon-watch"></span>-->
-<!--						<p class="time">5 may, 16:00</p>-->
-<!--					</div>-->
-<!--				</div>-->
-<!--				<div class="note">-->
-<!--					<h3 class="header_n">line-height: 1.3;</h3>-->
-<!--					<p class="describe_n">line-height: 1.3;;['p;olikujyhgfdfrgtyholikujyhgfdfrgtyhujio9p0olikujyhgfdfrgtyhujio9p0ujio9p0[;polikujnhbgvfds</p>-->
-<!--					<div class="date">-->
-<!--						<span class="icon-watch"></span>-->
-<!--						<p class="time">5 may, 16:00</p>-->
-<!--					</div>-->
-<!--				</div>-->
-<!--				<div class="note">-->
-<!--					<h3 class="header_n">line-height: 1.3;</h3>-->
-<!--					<p class="describe_n">line-height: 1.3;;['p;olikujyhgfdfrgtyholikujyhgfdfrgtyhujio9p0olikujyhgfdfrgtyhujio9p0olikujyhgfdfrgtyhujio9p0olikujyhgfdfrgtyhujio9p0olikujyhgfdfrgtyhujio9p0olikujyhgfdfrgtyhujio9p0olikujyhgfdfrgtyhujio9p0olikujyhgfdfrgtyhujio9p0ujio9p0[;polikujnhbgvfds</p>-->
-<!--					<div class="date">-->
-<!--						<span class="icon-watch"></span>-->
-<!--						<p class="time">5 may, 16:00</p>-->
-<!--					</div>-->
-<!--				</div>-->
-<!--				<div class="note">-->
-<!--					<h3 class="header_n">line-height: 1.3;</h3>-->
-<!--					<p class="describe_n">line-height: 1.3;;['p;olikujyhgfdfrgtyhujio9p0[;polikujnhbgvfds</p>-->
-<!--					<div class="date">-->
-<!--						<span class="icon-watch"></span>-->
-<!--						<p class="time">5 may, 16:00</p>-->
-<!--					</div>-->
-<!--				</div>-->
-<!--				<div class="note">-->
-<!--					<h3 class="header_n">line-height: 1.3;</h3>-->
-<!--					<p class="describe_n">line-height: 1.3;;['p;olikujyhgfdfrgolikujyhgfdfrgtyhujio9p0olikujyhgfdfrgtyhujio9p0tyhujio9p0[;polikujnhbgvfds</p>-->
-<!--					<div class="date">-->
-<!--						<span class="icon-watch"></span>-->
-<!--						<p class="time">5 may, 16:00</p>-->
-<!--					</div>-->
-<!--				</div>-->
-<!--				<div class="note">-->
-<!--					<h3 class="header_n">line-height: 1.3;</h3>-->
-<!--					<p class="describe_n">line-height: 1.3;;['p;olikujyhgfdfrgtyhujio9p0[;polikujnhbgvfds</p>-->
-<!--					<div class="date">-->
-<!--						<span class="icon-watch"></span>-->
-<!--						<p class="time">5 may, 16:00</p>-->
-<!--					</div>-->
-<!--				</div>-->
-<!--				<div class="note">-->
-<!--					<h3 class="header_n">line-height: 1.3;</h3>-->
-<!--					<p class="describe_n">line-height: 1.3;;['p;olikujyhgfdfrgtyhujolikujyhgfdfrgtyhujio9p0io9p0[;polikujnhbgvfds</p>-->
-<!--					<div class="date">-->
-<!--						<span class="icon-watch"></span>-->
-<!--						<p class="time">5 may, 16:00</p>-->
-<!--					</div>-->
-<!--				</div>-->
-<!--				<div class="note">-->
-<!--					<h3 class="header_n">line-height: 1.3;</h3>-->
-<!--					<p class="describe_n">line-height: 1.3;;['p;olikujyhgfdfrgtyhujio9p0[;polikujnhbgvfds</p>-->
-<!--					<div class="date">-->
-<!--						<span class="icon-watch"></span>-->
-<!--						<p class="time">5 may, 16:00</p>-->
-<!--					</div>-->
-<!--				</div>-->
-<!--				<div class="note">-->
-<!--					<h3 class="header_n">line-height: 1.3;</h3>-->
-<!--					<p class="describe_n">line-height: 1.3;;['p;olikujyhgfdfrgtyhujio9p0[;polikujnhbgvfds</p>-->
-<!--					<div class="date">-->
-<!--						<span class="icon-watch"></span>-->
-<!--						<p class="time">5 may, 16:00</p>-->
-<!--					</div>-->
-<!--				</div>-->
-<!--				<div class="note">-->
-<!--					<h3 class="header_n">line-height: 1.3;</h3>-->
-<!--					<p class="describe_n">line-height: 1.3;;['p;olikujyhgfdfrolikujyhgfdfrgtyhujio9p0olikujyhgfdfrgtyhujio9p0gtyhujio9p0[;polikujnhbgvfds</p>-->
-<!--					<div class="date">-->
-<!--						<span class="icon-watch"></span>-->
-<!--						<p class="time">5 may, 16:00</p>-->
-<!--					</div>-->
-<!--				</div>-->
-<!--				<div class="note">-->
-<!--					<h3 class="header_n">line-height: 1.3;</h3>-->
-<!--					<p class="describe_n">line-height: 1.3;;['p;olikujyhgfdfrgtyhujio9p0[;polikujnhbgvfds</p>-->
-<!--					<div class="date">-->
-<!--						<span class="icon-watch"></span>-->
-<!--						<p class="time">5 may, 16:00</p>-->
-<!--					</div>-->
-<!--				</div>-->
-<!--				<div class="note">-->
-<!--					<h3 class="header_n">line-height: 1.3;</h3>-->
-<!--					<p class="describe_n">line-height: 1.3;;['p;olikujyhgfdfrgtyhujio9p0[;polikujnhbgvfds</p>-->
-<!--					<div class="date">-->
-<!--						<span class="icon-watch"></span>-->
-<!--						<p class="time">5 may, 16:00</p>-->
-<!--					</div>-->
-<!--				</div>-->
-<!--				<div class="note">-->
-<!--					<h3 class="header_n">line-height: 1.3;</h3>-->
-<!--					<p class="describe_n">line-height: 1.3;;['p;olikujyhgfdfrgtyhujio9polikujyhgfdfrgtyhujio9p00[;polikujnhbgvfds</p>-->
-<!--					<div class="date">-->
-<!--						<span class="icon-watch"></span>-->
-<!--						<p class="time">5 may, 16:00</p>-->
-<!--					</div>-->
-<!--				</div>-->
-<!--				<div class="note">-->
-<!--					<h3 class="header_n">line-height: 1.3;</h3>-->
-<!--					<p class="describe_n">line-height: 1.3;;['p;olikujyhgfdfrgtyhujio9p0[;polikujnhbgvfds</p>-->
-<!--					<div class="date">-->
-<!--						<span class="icon-watch"></span>-->
-<!--						<p class="time">5 may, 16:00</p>-->
-<!--					</div>-->
-<!--				</div>-->
-<!--				<div class="note">-->
-<!--					<h3 class="header_n">line-height: 1.3;</h3>-->
-<!--					<i class="describe_n">fuck</i>-->
-<!--					<div class="date">-->
-<!--						<span class="icon-watch"></span>-->
-<!--						<p class="time">5 may, 16:00</p>-->
-<!--					</div>-->
+
 				</div>
 			</div>
 		</div>
 	</div>
-{% now "jS F Y H:i" %}<br/>
+<!--{% now "jS F Y H:i" %}<br/>-->
 
 
 
-{{ item.date_in|date:"j E Y" }}
-<div><br><h1> Notatka </h1>
-    {% for post in posts %}
-        {{ post.title }}<br>
-        {{ post.body }}<br>
-	{{post.showtime}}
-    {% endfor %}
+<!--{{ item.date_in|date:"j E Y" }}-->
+<!--<div><br><h1> Notatka </h1>-->
+<!--    {% for post in posts %}-->
+<!--        {{ post.title }}<br>-->
+<!--        {{ post.body }}<br>-->
+<!--	{{post.showtime}}-->
+<!--    {% endfor %}-->
 
-<!--<p>{{ post.title }}</p>-->
-<!--    <p>{{ post.body }}</p>-->
-<!--    <p>{{ post.user }}</p>-->
-<form action="{% url 'search_results' %}" method="get">
-  <input name="q" type="text" placeholder="Search...">
-</form>
-	<h1>Search Results</h1>
+<!--&lt;!&ndash;<p>{{ post.title }}</p>&ndash;&gt;-->
+<!--&lt;!&ndash;    <p>{{ post.body }}</p>&ndash;&gt;-->
+<!--&lt;!&ndash;    <p>{{ post.user }}</p>&ndash;&gt;-->
+<!--<form action="{% url 'search_results' %}" method="get">-->
+<!--  <input name="q" type="text" placeholder="Search...">-->
+<!--</form>-->
+<!--	<h1>Search Results</h1>-->
 
-<ul>
-  {% for Postq in object_list %}
-    <li>
-      {{ Postq.title }}, {{ Postq.body }}
-    </li>
-  {% endfor %}
-</ul>
+<!--<ul>-->
+<!--  {% for Postq in object_list %}-->
+<!--    <li>-->
+<!--      {{ Postq.title }}, {{ Postq.body }}-->
+<!--    </li>-->
+<!--  {% endfor %}-->
+<!--</ul>-->
 </body>
 </html>

@@ -1,0 +1,120 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Diary</title>
+	<link rel="stylesheet" href="{% static 'icomoon/styles.css' %}">
+	<link rel="stylesheet" href="{% static 'css/1.css' %}">
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script src="{% static 'js/mains.js' %}"></script>
+<!--	<script src="http://static.example.com/js/main.js"></script>-->
+</head>
+<body>
+<header class="header">
+	<div class="header__left">
+		<div class="header__left__cont">
+			<div class='header__burger' data-title="Menu">
+				<span class="burger"></span>
+			</div>
+
+			<div class="header__left__inf">Notes</div>
+		</div>
+
+		<div class="header__search">
+			<span class="icon-arrow-left2" data-title="Back"></span>
+			<span class="icon-search" data-title="Search"></span>
+			<form action="{% url 'search_results' %}" method="get">
+  <input class="header__input" name="q" type="text" placeholder="Search">
+</form>
+<!--			<input class="header__input" name="q" action="{% url 'search_results' %}" method="get" type="text" placeholder="Search">-->
+			<span class="icon-interface1" data-title="Clean up"></span>
+		</div>
+	</div>
+
+	<div class="header__right">
+		<div class="header__right__menu">
+			<a href="{{ '/' }}"><span class="icon-spinner11" data-title="Refresh"></span></a>
+			<span class="icon-download" data-title="List"></span>
+			<span class="icon-interface" data-title="Grid"></span>
+			<span class="icon-cog" data-title="Configuration"></span>
+		</div>
+
+		<div class="header__right__user user" data-title="{{ request.user }}">
+			<div class="user__icon"></div>
+			<button class="exit_button" ><a href="{{ '/accounts/logout/' }}">Exit</a></button>
+		</div>
+	</div>
+</header>
+	<div class="content">
+		<div class="content__side_menu menu">
+			<a href="{{ '/' }}" style="color: #000">
+			<div class="menu__item active_item">
+				<span class="icon-seo-and-web side_icon"></span>
+				<div class="item__describe it1">Notes</div>
+			</div>
+				</a>
+			<div class="menu__item">
+				<span class="icon-social-media side_icon"></span>
+				<div class="item__describe it2">Reminder</div>
+			</div>
+			<div class="menu__item">
+				<span class="icon-rubbish-can side_icon"></span>
+				<div class="item__describe it3">Trash can</div>
+			</div>
+		</div>
+		<!-- ************************************** -->
+		<div class="content_main">
+
+
+			<div class="notes_bloc">
+				{% for post in posts %}
+				<a href="delete/{{post.id}}"><div class="note"  style="background-color: {{post.color}}">
+					<h3 class="header_n">{{ post.title }}</h3>
+					<p class="describe_n">{{ post.body }}</p>
+					<div class="date">
+						<span class="icon-watch"></span>
+						<p class="time">{{post.created}}</p>
+					</div>
+				</div></a>
+
+				{% endfor %}
+
+				</div>
+			</div>
+		</div>
+	</div>
+<!--{% now "jS F Y H:i" %}<br/>-->
+
+
+
+<!--{{ item.date_in|date:"j E Y" }}-->
+<!--<div><br><h1> Notatka </h1>-->
+<!--    {% for post in posts %}-->
+<!--        {{ post.title }}<br>-->
+<!--        {{ post.body }}<br>-->
+<!--	{{post.showtime}}-->
+<!--    {% endfor %}-->
+
+<!--<p>{{ post.title }}</p>-->
+<!--    <p>{{ post.body }}</p>-->
+<!--    <p>{{ post.user }}</p>-->
+<!--<form action="{% url 'search_results' %}" method="get">-->
+<!--  <input name="q" type="text" placeholder="Search...">-->
+<!--</form>-->
+
+
+<!--<ul>-->
+<!--  {% for Postq in object_list %}-->
+<!--    <li>-->
+<!--      {{ Postq.title }}, {{ Postq.body }}-->
+<!--    </li>-->
+<!--  {% endfor %}-->
+<!--</ul>-->
+
+
+</body>
+
+</html>

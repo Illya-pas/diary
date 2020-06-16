@@ -18,11 +18,14 @@ Including another URLconf
 """
 
 from django.contrib import admin
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.urls import path, include
 from register.views import login_view, register_view, logout_view
-from splanerapp.views import SearchResultsView
+from splanerapp.views import SearchResultsView, deletpost, deletpostpage
 
 urlpatterns = [
+    path('deletpostt/', deletpostpage),
+    path('deletpostt/delete/<int:id>/', deletpost),
     path('search/', SearchResultsView.as_view(), name='search_results'),
     path('admin/', admin.site.urls),
     path('', include('splanerapp.urls')),
@@ -30,3 +33,4 @@ urlpatterns = [
     path('accounts/register/', register_view),
     path('accounts/logout/', logout_view)
 ]
+urlpatterns += staticfiles_urlpatterns()

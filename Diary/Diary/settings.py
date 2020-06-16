@@ -132,4 +132,5 @@ STATICFILES_DIRS = [STATIC_DIR, ]
 STATIC_URL = '/static/'
 # STATIC_ROOT = "/var/www/example.com/static/"
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+SERVE_STATIC = True
 SITE_ID = 1
