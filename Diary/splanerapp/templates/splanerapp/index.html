@@ -71,8 +71,8 @@
 						<input type="hidden" value="red"  name="color"> </input>
     					{{ form.as_p }}
 
-<!--						<input type="text" class="header_note note_in" placeholder="Print header">-->
-<!--						<textarea cols="15" rows="10" class="describe_notes note_in" placeholder="Notes..."></textarea>-->
+<!--						<input type="text" class="header_note note_in" placeholder="Print header" oninput="maxLengthCheck(this)" maxlength = "52">-->
+<!--						<textarea oninput="maxLengthCheck(this)" maxlength = "600" class="describe_notes note_in" placeholder="Notes..."></textarea>-->
 					</div>
 					<button class="icon-checkmark" type="submit" data-title="Append"></button>
 <!--					<span class="icon-checkmark" data-title="Append"></span>-->
@@ -248,7 +248,7 @@
 <form action="{% url 'search_results' %}" method="get">
   <input name="q" type="text" placeholder="Search...">
 </form>
-	<h1>Search Results</h1>
+
 
 <ul>
   {% for Postq in object_list %}
@@ -257,5 +257,7 @@
     </li>
   {% endfor %}
 </ul>
+
+
 </body>
 </html>

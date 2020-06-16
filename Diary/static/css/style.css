@@ -229,6 +229,17 @@ button{
   align-items: center;
   width: 65px;
 }
+
+
+
+
+.exit_button a{
+  font-style: none;
+}
+
+
+
+
 .header__right__user:after {
   max-height: 25px;
   position: absolute;
@@ -773,4 +784,77 @@ button{
 .time {
   font-size: 15px;
   margin-left: 10px;
+}
+
+.note {
+  border: 2px solid grey;
+  width: 240px;
+  min-height: 122px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 0 15px 15px 0;
+}
+.note .header_n {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-size: calc(16px + 2 * ((100vw - 320px) / 960));
+  overflow-wrap: break-word;
+  line-height: 1.3;
+  font-weight: 600;
+}
+.note .describe_n {
+  font-size: calc(14px + 2 * ((100vw - 320px) / 960));
+  overflow-wrap: break-word;
+  margin-top: 8px;
+  line-height: 1.2;
+}
+
+.date {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  background-color: #F1F3F4;
+  padding: 4px 6px;
+  border-radius: 20px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.icon-watch {
+  font-size: 18px;
+}
+
+.time {
+  font-size: 15px;
+  margin-left: 10px;
+}
+
+.note {
+  position: relative;
+}
+.note:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 20;
+  -webkit-clip-path: polygon(6% 0, 0 5%, 45% 52%, 0 96%, 5% 100%, 50% 57%, 95% 100%, 100% 96%, 55% 52%, 100% 5%, 96% 0, 50% 47%);
+          clip-path: polygon(6% 0, 0 5%, 45% 52%, 0 96%, 5% 100%, 50% 57%, 95% 100%, 100% 96%, 55% 52%, 100% 5%, 96% 0, 50% 47%);
+  background-color: red;
+  opacity: 0;
+}
+.note:hover:after {
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+.note:hover {
+  cursor: pointer;
 }
