@@ -153,6 +153,7 @@ $('.notes_close').on('click', e => {
 	document.querySelector('.header_note').value = '';
 	document.querySelector('.describe_notes').value = '';
 })
+//********************************************************************
 function maxLengthCheck (object) {
     if (object.value.length > object.maxLength)
       object.value = object.value.slice(0, object.maxLength)
