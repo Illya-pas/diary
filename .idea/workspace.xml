@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fdfbdc8f-6690-4ee8-9135-d030b27fb74a" name="My Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Diary/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/Diary/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Diary/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Diary/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Diary/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Diary/static/js/main.js" afterDir="false" />
-    </list>
+    <list default="true" id="fdfbdc8f-6690-4ee8-9135-d030b27fb74a" name="My Changelist" comment="" />
     <list id="d5a22095-c0b9-478c-9513-cf50bc267634" name="Changelist" comment="" />
     <list id="0cf0956b-5ea7-4e13-ae5d-8c1a50596abd" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
