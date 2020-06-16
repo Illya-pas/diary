@@ -20,8 +20,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from register.views import login_view, register_view, logout_view
+from splanerapp.views import SearchResultsView
 
 urlpatterns = [
+    path('search/', SearchResultsView.as_view(), name='search_results'),
     path('admin/', admin.site.urls),
     path('', include('splanerapp.urls')),
     path('accounts/login/', login_view),

@@ -1,11 +1,9 @@
-from time import gmtime, strftime
-
-from django.contrib.auth.models import AbstractUser
+from django.db.models import Q
 from django.shortcuts import render, redirect
+from django.views.generic import ListView
+
 from .models import Post
 from .forms import PostForm
-from django.contrib.auth.mixins import LoginRequiredMixin
-from django.contrib.auth import authenticate
 
 
 def index(request):
@@ -14,6 +12,7 @@ def index(request):
         # print(request.user.is_authenticated)
     res = None
     post = Post.objects.filter(Users=request.user.id)
+
     if request.method == 'POST':
 
         # form_data = {"Users_id": request.user.id, **request.POST}
@@ -30,12 +29,27 @@ def index(request):
         else:
 
             form = PostForm()
+
     return render(request, 'splanerapp/index.html', {
         'posts': post,
         'form': form
     })
 
-#
+
+class SearchResultsView(ListView):
+    model = Post
+    template_name = 'splanerapp/search.html'
+
+    def get_queryset(self,):
+
+        query = self.request.GET.get('q')
+        object_list = Post.objects.filter(
+            Q(title__icontains=query) | Q(body__icontains=query)
+        )
+        # qw = object_list.objects.filter(id=form.id)
+
+
+        return object_list
 # from django.views.generic import DetailView
 # from .models import Post
 

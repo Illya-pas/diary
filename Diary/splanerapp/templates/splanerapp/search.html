@@ -64,46 +64,46 @@
 		</div>
 		<!-- ************************************** -->
 		<div class="content_main">
-			<div class="add_note">
-				<form class="append_note" method="post">
-					<div class="inputs">
-						{% csrf_token %}
-						<input type="hidden" value="red"  name="color"> </input>
-    					{{ form.as_p }}
+<!--			<div class="add_note">-->
+<!--				<form class="append_note" method="post">-->
+<!--					<div class="inputs">-->
+<!--						{% csrf_token %}-->
+<!--						<input type="hidden" value="red"  name="color"> </input>-->
+<!--    					{{ form.as_p }}-->
 
-<!--						<input type="text" class="header_note note_in" placeholder="Print header">-->
-<!--						<textarea cols="15" rows="10" class="describe_notes note_in" placeholder="Notes..."></textarea>-->
-					</div>
-					<button class="icon-checkmark" type="submit" data-title="Append"></button>
-<!--					<span class="icon-checkmark" data-title="Append"></span>-->
-				</form>
-				<div class="notes_menu">
-					<span class="icon-paint" data-title="Colour"><div class="notes_colours">
-						<div class="white color active_color" data-title="White"><span class="icon-checkmark"></span></div>
-						<div class="red color" data-title="Red"></div>
-						<div class="orange color" data-title="Orange"></div>
-						<div class="yellow color" data-title="Yellow"></div>
-						<div class="green color" data-title="Green"></div>
-						<div class="blue-green color" data-title="Blue-green"></div>
-						<div class="blue color" data-title="Blue"></div>
-						<div class="dark-blue color" data-title="Dark-blue"></div>
-						<div class="purple color" data-title="Purple"></div>
-						<div class="pink color" data-title="Pink"></div>
-						<div class="brown color" data-title="Brown"></div>
-						<div class="grey color" data-title="Grey"></div>
-					</div></span>
-					<span class="notes_close">Close</span>
-				</div>
-			</div>
+<!--&lt;!&ndash;						<input type="text" class="header_note note_in" placeholder="Print header">&ndash;&gt;-->
+<!--&lt;!&ndash;						<textarea cols="15" rows="10" class="describe_notes note_in" placeholder="Notes..."></textarea>&ndash;&gt;-->
+<!--					</div>-->
+<!--					<button class="icon-checkmark" type="submit" data-title="Append"></button>-->
+<!--&lt;!&ndash;					<span class="icon-checkmark" data-title="Append"></span>&ndash;&gt;-->
+<!--				</form>-->
+<!--				<div class="notes_menu">-->
+<!--					<span class="icon-paint" data-title="Colour"><div class="notes_colours">-->
+<!--						<div class="white color active_color" data-title="White"><span class="icon-checkmark"></span></div>-->
+<!--						<div class="red color" data-title="Red"></div>-->
+<!--						<div class="orange color" data-title="Orange"></div>-->
+<!--						<div class="yellow color" data-title="Yellow"></div>-->
+<!--						<div class="green color" data-title="Green"></div>-->
+<!--						<div class="blue-green color" data-title="Blue-green"></div>-->
+<!--						<div class="blue color" data-title="Blue"></div>-->
+<!--						<div class="dark-blue color" data-title="Dark-blue"></div>-->
+<!--						<div class="purple color" data-title="Purple"></div>-->
+<!--						<div class="pink color" data-title="Pink"></div>-->
+<!--						<div class="brown color" data-title="Brown"></div>-->
+<!--						<div class="grey color" data-title="Grey"></div>-->
+<!--					</div></span>-->
+<!--					<span class="notes_close">Close</span>-->
+<!--				</div>-->
+<!--			</div>-->
 
 			<div class="notes_bloc">
-				{% for post in posts %}
+				{% for Postq in object_list %}
 				<div class="note" style="background-color: {{post.color}}">
-					<h3 class="header_n">{{ post.title }}</h3>
-					<p class="describe_n">{{ post.body }}</p>
+					<h3 class="header_n">{{ Postq.title }}</h3>
+					<p class="describe_n">{{ Postq.body }}</p>
 					<div class="date">
 						<span class="icon-watch"></span>
-						<p class="time">{{post.created}}</p>
+						<p class="time">{{Postq.created}}</p>
 					</div>
 				</div>
 				{% endfor %}
